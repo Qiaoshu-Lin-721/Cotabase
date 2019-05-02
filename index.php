@@ -1,49 +1,59 @@
-<?php
-include 'connection.php';
+<!doctype html>
+<html lang="en">
+  <head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="CSS/background.css "> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Signin Template · Bootstrap</title>
 
-$conn = OpenCon();
-?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Cotabase</title>
-	<link rel="stylesheet" href="CSS/main.css" type="text/css">
-</head>
-<body>
-	<div id="page-container">
-   		<div id="content-wrap">
-     		<div id="header">
-     			<div class="title">
-					<h1>COTABASE</h1>
-				</div>
-				<div class="header-button">
-					<a>Login</a>
-				</div>
-			</div>
-			<div id="left-nav">
-				<ul class="left-nav-list">
-					<li>New Administrator</li>
-					<li>All Employees</li>
-					<li>Add Employee</li>
-					<li>Remove Employee</li>
-					<li>Search</li>
-				</ul>
-			</div>
-			<div id="main">
-				<?php 
-					$sql = "SELECT * FROM Clients";
-					$result = $conn -> query($sql);
-					while($row = $result->fetch_assoc()) {
-        				echo "Client ID: " . $row["client_id"]. " | Name: " . $row["first_name"]. " " . $row["last_name"]. "<br>";
-    				}
-				?>
-			</div>
-   		</div>
-   		<footer id="footer"></footer>
- 	</div>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+​
+
+  <style>
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+
+    <link href="CSS\signin.css" rel="stylesheet">
+  
+     
+  <body class="text-center">
+    <form class="form-signin">
+    
+  <img class="mb-4" src="cotabase.PNG" alt="" width="150" height="150">
+  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+</form>
 </body>
 </html>
-
-<?php
-CLoseCon($conn);
-?>
