@@ -14,7 +14,7 @@
 
       
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="#">CB</a>
+  <a class="navbar-brand" href="index.php">CB</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -22,7 +22,7 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Log out <span class="sr-only">(current)</span></a>
+        <a href="index.php" class="nav-link" href="#">Log out <span class="sr-only">(current)</span></a>
       </li>
       
       
@@ -55,26 +55,25 @@
       <div class="col-md-4">
         <h2>ADD</h2>
         <p>Add customers to the existing database :)</p>
-        <p><a class="btn btn-success" href="#" role="button">Add &raquo;</a></p>
+        <p><a href="add.php" class="btn btn-success" href="#" role="button">Add &raquo;</a></p>
       </div>
       <div class="col-md-4">
         <h2>REMOVE</h2>
         <p>Delete customers from the existing database permanantly : (</p>
-        <p><a class="btn btn-danger" href="#" role="button">Remove &raquo;</a></p>
+        <p><a class="btn btn-danger" href="remove.php" role="button">Remove &raquo;</a></p>
       </div>
       <div class="col-md-4">
-        <h2>DEACTIVATE</h2>
-        <p>NULL clients for a temporary period.</p>
-        <p><a class="btn btn-warning" href="#" role="button">Deactivate &raquo;</a></p>
+        <h2>View</h2>
+        <p>View all clients in the database.</p>
+        <p><a href="view.php" class="btn btn-warning" href="#" role="button">View &raquo;</a></p>
       </div>
      <div class="col-md-4">
         <h2>SEARCH</h2>
         <p>Search for any client in the entire database.</p>
-        <p><a class="btn btn-info" href="#" role="button">Search &raquo;</a></p>
+        <p><a class="btn btn-info" href="search.php" role="button">Search &raquo;</a></p>
 
       </div>
     </div>
-
     <hr>
 
   </div> <!-- /container -->
